@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp"
+        tools:context=".ui.DetailsActivity">
+
+
+        <TextView
+            android:id="@+id/symbol_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="Symbol" />
+
+        <TextView
+            android:id="@+id/symbol_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/symbol_text"
+            android:layout_gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="ETHBTC" />
+
+        <TextView
+            android:id="@+id/price_change_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/symbol_txt"
+            android:paddingTop="10dp"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="Price change" />
+
+        <TextView
+            android:id="@+id/price_change"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/price_change_text"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="0.00415900" />
+
+        <TextView
+            android:id="@+id/priceChangePercent_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/price_change"
+            android:paddingTop="10dp"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="Price change percent" />
+
+        <TextView
+            android:id="@+id/priceChangePercent_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/priceChangePercent_txt"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="0.00415900" />
+
+         <TextView
+            android:id="@+id/weightedAvgPrice_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/priceChangePercent_value"
+            android:paddingTop="10dp"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="Weighted Avg Price" />
+
+        <TextView
+            android:id="@+id/weightedAvgPrice_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/weightedAvgPrice_txt"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="0.00415900" />
+
+         <TextView
+            android:id="@+id/prevClosePrice_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/weightedAvgPrice_value"
+            android:paddingTop="10dp"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="Previous close price" />
+
+        <TextView
+            android:id="@+id/prevClosePrice_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/prevClosePrice_txt"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="0.00415900" />
+
+         <TextView
+            android:id="@+id/lastPrice_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/prevClosePrice_value"
+            android:paddingTop="10dp"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="Last price" />
+
+        <TextView
+            android:id="@+id/lastPrice_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lastPrice_txt"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="0.00415900" />
+
+         <TextView
+            android:id="@+id/lastQty_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lastPrice_value"
+            android:paddingTop="10dp"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="Last Qty" />
+
+        <TextView
+            android:id="@+id/lastQty_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lastQty_txt"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="0.00415900" />
+
+         <TextView
+            android:id="@+id/bidPrice_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lastQty_value"
+            android:paddingTop="10dp"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="Bid price" />
+
+        <TextView
+            android:id="@+id/bidPrice_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bidPrice_txt"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="0.00415900" />
+
+         <TextView
+            android:id="@+id/bidQty_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bidPrice_value"
+            android:paddingTop="10dp"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="Bid Qty" />
+
+        <TextView
+            android:id="@+id/bidQty_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bidQty_txt"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="0.00415900" />
+
+         <TextView
+            android:id="@+id/askPrice_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bidQty_value"
+            android:paddingTop="10dp"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="Ask price" />
+
+        <TextView
+            android:id="@+id/askPrice_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/askPrice_txt"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="0.00415900" />
+
+
+        <TextView
+            android:id="@+id/askQty_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/askPrice_value"
+            android:paddingTop="10dp"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="Ask Qty" />
+
+        <TextView
+            android:id="@+id/askQty_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/askQty_txt"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="0.00415900" />
+
+
+        <TextView
+            android:id="@+id/openPrice_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/askQty_value"
+            android:paddingTop="10dp"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="Open price" />
+
+        <TextView
+            android:id="@+id/openPrice_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/openPrice_txt"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="0.00415900" />
+
+
+        <TextView
+            android:id="@+id/highPrice_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/openPrice_value"
+            android:paddingTop="10dp"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="High price" />
+
+        <TextView
+            android:id="@+id/highPrice_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/highPrice_txt"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="0.00415900" />
+
+
+        <TextView
+            android:id="@+id/lowPrice_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/highPrice_value"
+            android:paddingTop="10dp"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="Low price" />
+
+        <TextView
+            android:id="@+id/lowPrice_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lowPrice_txt"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="0.00415900" />
+
+
+        <TextView
+            android:id="@+id/volume_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lowPrice_value"
+            android:paddingTop="10dp"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="Volume" />
+
+        <TextView
+            android:id="@+id/volume_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/volume_txt"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="0.00415900" />
+
+
+        <TextView
+            android:id="@+id/quoteVolume_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/volume_value"
+            android:paddingTop="10dp"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="Quote volume" />
+
+        <TextView
+            android:id="@+id/quoteVolume_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/quoteVolume_txt"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="0.00415900" />
+
+
+        <TextView
+            android:id="@+id/openTime_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/quoteVolume_value"
+            android:paddingTop="10dp"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="Open time" />
+
+        <TextView
+            android:id="@+id/openTime_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/openTime_txt"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="0.00415900" />
+
+
+        <TextView
+            android:id="@+id/closeTime_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/openTime_value"
+            android:paddingTop="10dp"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="Close time" />
+
+        <TextView
+            android:id="@+id/closeTime_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/closeTime_txt"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="0.00415900" />
+
+        <TextView
+            android:id="@+id/firstId_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/closeTime_value"
+            android:paddingTop="10dp"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="First id" />
+
+        <TextView
+            android:id="@+id/firstId_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/firstId_txt"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="0.00415900" />
+
+
+        <TextView
+            android:id="@+id/lastId_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/firstId_value"
+            android:paddingTop="10dp"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="Last id" />
+
+        <TextView
+            android:id="@+id/lastId_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lastId_txt"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="0.00415900" />
+
+
+        <TextView
+            android:id="@+id/count_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lastId_value"
+            android:paddingTop="10dp"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="Count" />
+
+        <TextView
+            android:id="@+id/count_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/count_txt"
+            android:gravity="start"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="0.00415900" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

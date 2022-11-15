@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/symbol_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBaseline_toTopOf="parent"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/symbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="ETHBTC" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="5.67%" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bid_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/symbol_layout"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/bid_ask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="bid/ask: " />
+
+        <TextView
+            android:id="@+id/bid_ask_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="0.07741400/0.07741500" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
